@@ -1,4 +1,4 @@
-import numpy as np
+import numpy
 
 def dictionary_to_vector(parameters):
     """
@@ -12,7 +12,7 @@ def dictionary_to_vector(parameters):
     """
     vector = []
     for i in parameters:
-        reshaped = np.reshape(parameters[i], parameters[i].shape[0]*parameters[i].shape[1])
+        reshaped = numpy.reshape(parameters[i], parameters[i].shape[0]*parameters[i].shape[1])
         vector.extend(reshaped)
     return vector
 
