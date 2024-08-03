@@ -1,6 +1,5 @@
 import numpy as np
 
-print(np.__version__)
 def dictionary_to_vector(parameters):
     """
     converts parameter dictionary to a single vector
@@ -11,7 +10,7 @@ def dictionary_to_vector(parameters):
     Return:
     vector: vector of model parameters
     """
-    vector = []
+    vector = np.array()
     for i in parameters:
         reshaped = np.reshape(parameters[i], parameters[i].shape[0]*parameters[i].shape[1])
         vector.extend(reshaped)
