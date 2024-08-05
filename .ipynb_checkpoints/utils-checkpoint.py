@@ -10,11 +10,11 @@ def dictionary_to_vector(parameters):
     Return:
     vector: vector of model parameters
     """
-    vector = np.array()
+    vector = []
     for i in parameters:
         reshaped = np.reshape(parameters[i], parameters[i].shape[0]*parameters[i].shape[1])
         vector.extend(reshaped)
-    return vector
+    return np.expand_dims(np.array(vector),axis=0)
 
 def vector_to_dictionary(vector, parameters):
     """
